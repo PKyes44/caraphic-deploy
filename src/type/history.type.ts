@@ -1,6 +1,5 @@
 import { Element } from "./element.type";
 import { PageType } from "./page.type";
-import { TextBoxType } from "./textBox.type";
 
 export type HistoryType = {
   id: number;
@@ -8,4 +7,3 @@ export type HistoryType = {
   type: "element" | "page";
   content: Element | PageType;
 };
-export type UndoType = TextBoxType | PageType;
