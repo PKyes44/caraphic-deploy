@@ -1,5 +1,6 @@
-import { Element, TextBoxType } from "./element.type";
+import { Element } from "./element.type";
 import { PageType } from "./page.type";
+import { TextBoxType } from "./textBox.type";
 
 export type HistoryType = {
   id: number;
