@@ -2,17 +2,17 @@ import { useEffect, useState } from "react";
 import { DrawTool, useDrawStore } from "../../../store/draw.store";
 
 const BLUE_PEN: DrawTool = {
-  color: "blue",
+  color: "#0000FF",
   width: 1,
   transparency: 100,
 };
 const RED_PEN: DrawTool = {
-  color: "red",
+  color: "#FF0000",
   width: 3,
   transparency: 100,
 };
 const YELLOW_PEN: DrawTool = {
-  color: "yellow",
+  color: "#FFFF00",
   width: 5,
   transparency: 50,
 };
@@ -63,40 +63,33 @@ function DrawPalette() {
       <h4 className="font-bold mb-4">Drawing Pens</h4>
       <button
         className={`${
-          isActive && activedTool!.color === "blue"
+          isActive && activedTool!.color === BLUE_PEN.color
             ? "ml-[-15px]"
             : "ml-[-40px]"
         }`}
         onClick={() => toggleIsDrawing(BLUE_PEN)}
       >
-        <img
-          src="https://wbqryjgwbnmvgjsgksvg.supabase.co/storage/v1/object/public/images/pens/blue-pen.img.svg"
-          alt=""
-        />
+        <img src="/src/assets/pens/blue-pen.img.svg" alt="" />
       </button>
       <button
         className={`${
-          isActive && activedTool!.color === "red" ? "ml-[-15px]" : "ml-[-40px]"
+          isActive && activedTool!.color === RED_PEN.color
+            ? "ml-[-15px]"
+            : "ml-[-40px]"
         }`}
         onClick={() => toggleIsDrawing(RED_PEN)}
       >
-        <img
-          src="https://wbqryjgwbnmvgjsgksvg.supabase.co/storage/v1/object/public/images/pens/red-pen.img.svg"
-          alt=""
-        />
+        <img src="/src/assets/pens/red-pen.img.svg" alt="" />
       </button>
       <button
         className={`${
-          isActive && activedTool!.color === "yellow"
+          isActive && activedTool!.color === YELLOW_PEN.color
             ? "ml-[-15px]"
             : "ml-[-40px]"
         }`}
         onClick={() => toggleIsDrawing(YELLOW_PEN)}
       >
-        <img
-          src="https://wbqryjgwbnmvgjsgksvg.supabase.co/storage/v1/object/public/images/pens/yellow-pen.img.svg"
-          alt=""
-        />
+        <img src="/src/assets/pens/yellow-pen.img.svg" alt="" />
       </button>
       <div className="flex flex-col mt-10">
         <label htmlFor="stroke-weight" className="font-bold">

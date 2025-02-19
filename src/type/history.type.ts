@@ -1,4 +1,4 @@
-import { Element } from "./element.type";
+import { Element, TextBoxType } from "./element.type";
 import { PageType } from "./page.type";
 
 export type HistoryType = {
@@ -7,3 +7,4 @@ export type HistoryType = {
   type: "element" | "page";
   content: Element | PageType;
 };
+export type UndoType = TextBoxType | PageType;
